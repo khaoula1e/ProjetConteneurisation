@@ -1,0 +1,7 @@
+# ConfigMap to expose configuration related to backend application
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-configmap # name 
+data:
+  server-uri: 10.108.215.104 

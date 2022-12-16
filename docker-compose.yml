@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  frontend:
+    image: localhost:5000/frontend-docker
+    container_name: frontend
+    ports:
+      - "3001:80"
+
+  backend:
+    image: localhost:5000/backend-docker
+    container_name: backend
+    ports:
+      - "8000:8000"
+  mongo:
+    image: localhost:5000/mongo
+    container_name: mongodb-service
+    volumes:
+      - mongovol:/mongodb
+volumes:
+  mongovol:
+    driver: local
